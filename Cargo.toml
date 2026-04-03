@@ -1,0 +1,24 @@
+[package]
+name = "tauri-plugin-push-notifications"
+version = "0.1.0"
+description = "Native push notifications for Tauri v2 mobile apps (FCM + APNs)"
+authors = ["RmB <robseris@gmail.com>"]
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/nicepush/tauri-plugin-push-notifications"
+edition = "2021"
+keywords = ["tauri", "push-notifications", "fcm", "apns", "mobile"]
+categories = ["api-bindings", "mobile"]
+links = "tauri-plugin-push-notifications"
+
+[dependencies]
+tauri = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+thiserror = "2"
+log = "0.4"
+
+[target.'cfg(target_os = "android")'.dependencies]
+jni = "0.21"
+
+[build-dependencies]
+tauri-plugin = { version = "2", features = ["build"] }

@@ -1,0 +1,6 @@
+[default]
+description = "Default permissions for the push-notifications plugin"
+permissions = [
+  "allow-request-permission",
+  "allow-get-token",
+]
