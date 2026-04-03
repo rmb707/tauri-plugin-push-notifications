@@ -79,7 +79,7 @@ func handleAPNsToken(_ deviceToken: Data) {
 /// Tauri's auto-generated AppDelegate doesn't implement this method, so APNs tokens
 /// would otherwise be silently dropped. This injects the method at runtime using the
 /// Objective-C runtime.
-enum PushAppDelegateSwizzler {
+class PushAppDelegateSwizzler: NSObject {
     private static var didSwizzle = false
 
     static func swizzle() {
