@@ -47,10 +47,9 @@ class PushNotificationsPlugin: Plugin {
         }
     }
 
-    @objc func getToken(_ invoke: Invoke) {
-        ensureRegistered()
-        invoke.resolve(["token": ""])
-    }
+    // NOTE: No getToken handler here. The Rust command handles token retrieval
+    // from the global store. If we defined getToken in Swift, Tauri would dispatch
+    // to it instead of Rust, and we'd always return "" instead of the real token.
 }
 
 @_cdecl("init_plugin_push_notifications")
