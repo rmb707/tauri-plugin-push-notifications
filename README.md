@@ -12,7 +12,7 @@ In your app's `src-tauri/Cargo.toml`:
 
 ```toml
 [target.'cfg(any(target_os = "android", target_os = "ios"))'.dependencies]
-tauri-plugin-push-notifications = { git = "https://github.com/nicepush/tauri-plugin-push-notifications" }
+tauri-plugin-push-notifications = { git = "https://github.com/rmb707/tauri-plugin-push-notifications" }
 ```
 
 ### 2. Register the plugin
